@@ -13,7 +13,7 @@ driver = webdriver.Firefox()
 driver.get("https://andrew-winkler-portfolio.netlify.app/")
 
 # Find all project links on the page
-project_links = driver.find_elements_by_css_selector("a.project-link")
+project_links = driver.find_elements(By.CSS_SELECTOR, "a.project-link")
 
 # Iterate through each project link and open it
 for link in project_links:
