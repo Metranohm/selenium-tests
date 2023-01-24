@@ -9,21 +9,32 @@ PATH = "/usr/bin/chromedriver"
 driver = webdriver.Chrome(PATH)
 
 driver.get("https://techwithtim.net")
-print(driver.title)
 
-search = driver.find_element("name", "s")
-search.send_keys("test")
-search.send_keys(Keys.RETURN)
+link = driver.find_element((By.LINK_TEXT, "Python Programming"))
+link.click()
 
 try: 
-    main = WebDriverWait(driver, 10).until(
-        EC.presence_of_element_located((By.ID, "main"))
+    element = WebDriverWait(driver, 10).until(
+        EC.presence_of_element_located((By.LINK_TEXT, "Beginner Python Tutorials"))
     )
-finally:
+    element.click()
+except:
     driver.quit()
+# print(driver.title)
 
-main = driver.find_element("id", "main")
-print(main.text)
+# search = driver.find_element("name", "s")
+# search.send_keys("test")
+# search.send_keys(Keys.RETURN)
 
-
-driver.quit()
+# try: 
+#     main = WebDriverWait(driver, 10).until(
+#         EC.presence_of_element_located((By.ID, "main"))
+#     )
+    
+#     articles = main.find_elements(By.TAG_NAME, "article")
+#     for article in articles:
+#         header = article.find_element(By.CLASS_NAME, "entry-summary")
+#         print(header.text)
+    
+# finally:
+#     driver.quit()
