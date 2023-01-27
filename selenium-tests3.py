@@ -15,5 +15,39 @@ search_box.submit()
 # assert that the first result has the search term in the title
 assert "andrew winkler" in driver.title
 
-# close browser
-driver.quit()
+# find search box and enter search term
+search_box = driver.find_element(By.NAME, "q")
+search_box.clear()
+search_box.send_keys("todd blake")
+search_box.submit()
+
+# assert that the first result has the search term in the title
+assert "todd blake" in driver.title
+
+# find search box and enter search term
+search_box = driver.find_element(By.NAME, "q")
+search_box.clear()
+search_box.send_keys("fred schmed")
+search_box.submit()
+
+# assert that the first result has the search term in the title
+assert "fred schmed" in driver.title
+
+# close the current window
+driver.close()
+
+#open new browser window
+driver = webdriver.Chrome()
+
+# navigate to Google
+driver.get("https://www.google.com")
+
+# find search box and enter search term
+search_box = driver.find_element(By.NAME, "q")
+search_box.send_keys("turtles")
+search_box.submit()
+
+# assert that the first result has the search term in the title
+assert "turtles" in driver.title
+
+driver.pause = 50  # pause for 50 seconds
