@@ -50,4 +50,14 @@ search_box.submit()
 # assert that the first result has the search term in the title
 assert "turtles" in driver.title
 
-driver.pause = 50  # pause for 50 seconds
+driver.wait(50)
+driver.close()
+
+driver.get("https://www.google.com")
+
+# find search box and enter search term
+search_box = driver.find_element(By.NAME, "q")
+search_box.send_keys("hairy nipples")
+search_box.submit()
+
+assert "hairy nipples" in driver.title
