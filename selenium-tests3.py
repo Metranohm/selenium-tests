@@ -8,15 +8,11 @@ driver = webdriver.Chrome(executable_path="usr/local/bin/chromedriver")
 
 # navigate to Google
 driver.get("https://www.google.com")
-
+assert "Andrew" in driver.title
 
 # find search box and enter search term
-search_box = driver.find_element(By.NAME, "q")
-search_box.send_keys("andrew winkler")
-search_box.submit()
+driver.find_element((By.TAG_NAME, "Projects")).click()
 
-# assert that the first result has the search term in the title
-assert "andrew winkler" in driver.title
 
 # find search box and enter search term
 search_box = driver.find_element(By.NAME, "q")
