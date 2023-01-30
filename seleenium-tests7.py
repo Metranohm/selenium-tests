@@ -6,20 +6,9 @@ import time
 #Through Selenium test we will invoke the executable file which will then #invoke actual browser
 driver = webdriver.Chrome(executable_path="usr/local/bin/chromedriver")
 
-driver.get('https://andrew-winkler-portfolio.netlify.app/')
-time.sleep(5)
-link = driver.find_element((By.LINK_TEXT, "projects"))
-link.click()
+driver.get('https://www.yahoo.com')
 
-time.sleep(5)
-
-
-link = driver.find_element((By.CLASS_NAME, "ProjectPreview_h3__dE+pg"))
-link.click()
-time.sleep(5)
-
-link = driver.find_element((By.LINK_TEXT, "View deployed"))
-link.click()
-
-time.sleep(50)
-
+search_box = driver.find_element(By.NAME, "q")
+search_box.clear()
+search_box.send_keys("python")
+search_box.submit()
