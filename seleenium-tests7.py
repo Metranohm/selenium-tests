@@ -10,5 +10,6 @@ driver.get('https://www.yahoo.com')
 
 search_box = driver.find_element(By.NAME, "q")
 search_box.clear()
-search_box.send_keys("python")
+search_box.send_keys("electric slide")
 search_box.submit()
+
