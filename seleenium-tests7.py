@@ -11,14 +11,16 @@ driver = webdriver.Chrome(executable_path="usr/local/bin/chromedriver")
 driver.get("https://google.com")
 
 # Locate the search bar and input the search query
-search_bar = driver.find_element_by_name("q")
+search_bar = driver.find_element(By.NAME,"q")
 search_bar.send_keys("black-footed ferrets")
 search_bar.send_keys(Keys.RETURN)
 
 # Wait for the search results to load
 wait = WebDriverWait(driver, 10)
-results = wait.until(EC.presence_of_all_elements_located((By.CSS_SELECTOR, "div.r a")))
+results = wait.until(EC.presence_of_all_elements((By.CSS_SELECTOR, "div.r a")))
 
 # Select the 3rd search result
 result = results[2]
 result.click()
+
+
