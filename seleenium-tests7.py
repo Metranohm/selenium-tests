@@ -17,7 +17,7 @@ search_bar.send_keys(Keys.RETURN)
 
 # Wait for the search results to load
 wait = WebDriverWait(driver, 10)
-results = wait.until(EC.presence_of_all_elements((By.CSS_SELECTOR, "div.r a")))
+results = wait.until(EC.presence_of_all_elements_located((By.CSS_SELECTOR, "div.r a")))
 
 # Select the 3rd search result
 result = results[2]
