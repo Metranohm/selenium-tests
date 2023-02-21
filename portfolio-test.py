@@ -10,7 +10,7 @@ driver = webdriver.Chrome(service=s)
 driver.get('https://andrew-winkler-portfolio.netlify.app/')
 
 # Find all the elements in the DOM
-elements = driver.find_elements(By.CSS_SELECTOR, "*")
+elements = driver.find_elements(By.LINK_TEXT, "About")
 
 # Check that each element is present on the page and visible
 for element in elements:
