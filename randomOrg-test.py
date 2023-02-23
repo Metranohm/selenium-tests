@@ -7,6 +7,7 @@ import os
 
 s = Service('usr/local/bin/chromedriver')
 driver = webdriver.Chrome(service=s)
+# Random.org testing
 driver.get("https://www.random.org/integers")
 
 num_numbers = driver.find_element(By.CSS_SELECTOR, 'input[name="num"]')
@@ -22,7 +23,7 @@ submit_button = driver.find_element(By.CSS_SELECTOR, 'input[value="Get Numbers"]
 submit_button.click()
 time.sleep(3)
 driver.back()
-
+# PHP Travels testing
 driver.get('https://phptravels.com/demo/')
 time.sleep(1)
 first_name = driver.find_element(By.CSS_SELECTOR, 'input[class="first_name input mb1"]')
@@ -36,4 +37,6 @@ email_address.send_keys('andrewwink@gmail.com')
 time.sleep(10)
 submit2_button = driver.find_element(By.CSS_SELECTOR, 'button[id="demo"]')
 submit2_button.click()
-time.sleep(10)
+time.sleep(3)
+driver.quit()
+
