@@ -3,7 +3,6 @@ from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.by import By
 import time
-import os
 
 s = Service('usr/local/bin/chromedriver')
 driver = webdriver.Chrome(service=s)
@@ -15,10 +14,13 @@ num_numbers.clear()
 num_numbers.send_keys("10")
 submit_button = driver.find_element(By.CSS_SELECTOR, 'input[value="Get Numbers"]')
 submit_button.click()
+time.sleep(3)
 driver.back()
+time.sleep(3)
 num_numbers = driver.find_element(By.CSS_SELECTOR, 'input[name="num"]')
 num_numbers.clear()
 num_numbers.send_keys("1000")
+time.sleep(3)
 submit_button = driver.find_element(By.CSS_SELECTOR, 'input[value="Get Numbers"]')
 submit_button.click()
 time.sleep(3)
@@ -37,6 +39,6 @@ email_address.send_keys('andrewwink@gmail.com')
 time.sleep(10)
 submit2_button = driver.find_element(By.CSS_SELECTOR, 'button[id="demo"]')
 submit2_button.click()
-time.sleep(3)
+time.sleep(7)
 driver.quit()
 
