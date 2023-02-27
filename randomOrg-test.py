@@ -55,10 +55,10 @@ driver = webdriver.Chrome(service=s)
 
 # PHP Travels testing
 driver.get('https://phptravels.com/demo/')
-time.sleep(3)
+time.sleep(1)
 pricing_button = driver.find_element(By.CSS_SELECTOR, 'a[class="jfHeader-menuListLink jfHeader-dynamicLink js-tracking js-myforms"')
 pricing_button.click()
-time.sleep(3)
+time.sleep(2)
 driver.back()
 time.sleep(2)
 features_dropdown = driver.find_element(By.CSS_SELECTOR, 'a[class="jfHeader-menuListLink jfHeader-dynamicLink js-tracking"]')
@@ -84,6 +84,12 @@ time.sleep(7)
 submit2_button = driver.find_element(By.CSS_SELECTOR, 'button[id="demo"]')
 submit2_button.click()
 time.sleep(3)
+signup_button = driver.find_element(By.CSS_SELECTOR, 'a[class="jfHeader-menuListLink jfHeader-dynamicLink jfHeader-signup-action signup  btn-outline-dark"]')
+signup_button.click()
+time.sleep(3)
+
+# test signup
+
 
 driver.quit()
 
