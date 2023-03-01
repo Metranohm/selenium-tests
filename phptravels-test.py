@@ -54,7 +54,7 @@ time.sleep(7)
 submit2_button = driver.find_element(By.CSS_SELECTOR, 'button[id="demo"]')
 submit2_button.click()
 
-time.sleep(3)
+time.sleep(2)
 
 # test signup: https://phptravels.org/register.php
 driver.get('https://phptravels.org/register.php')
@@ -63,12 +63,12 @@ driver.maximize_window()
 drop=Select(driver.find_element(By.CSS_SELECTOR, 'select[id="inputCountry"]'))
 drop.select_by_visible_text('United States')
 
-time.sleep(2)
+time.sleep(1)
 
 input_city = driver.find_element(By.CSS_SELECTOR, 'input[id="inputCity"]')
 input_city.send_keys("Austin")
 
-time.sleep(3)
+time.sleep(1)
 
 first_name2 = driver.find_element(By.CSS_SELECTOR, 'input[name="firstname"]')
 first_name2.send_keys("Halcyon")
@@ -87,7 +87,7 @@ company_name.send_keys("Orbital Enterprises")
 
 street_address1 = driver.find_element(By.CSS_SELECTOR, 'input[id="inputAddress1"]')
 street_address1.send_keys("1234 Chime St.")
-time.sleep(3)
+time.sleep(1)
 
 input_postcode = driver.find_element(By.CSS_SELECTOR, 'input[id="inputPostcode"]')
 input_postcode.send_keys('78758')
@@ -95,7 +95,7 @@ input_postcode.send_keys('78758')
 state_select = Select(driver.find_element(By.CSS_SELECTOR, 'select[id="stateselect"]'))
 state_select.select_by_visible_text('Texas')
 
-time.sleep(2)
+time.sleep(1)
 
 input_moblie = driver.find_element(By.CSS_SELECTOR, 'input[name="customfield[2]"]')
 input_moblie.send_keys('1234567890')
@@ -111,7 +111,7 @@ time.sleep(10)
 register_button = driver.find_element(By.CSS_SELECTOR, 'input[type="submit"]')
 register_button.click()
 
-time.sleep(10)
+time.sleep(25)
 
 
 driver.quit()
