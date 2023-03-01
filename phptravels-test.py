@@ -106,13 +106,31 @@ input_password1.send_keys('password84$')
 input_password2 = driver.find_element(By.CSS_SELECTOR, 'input[name="password2"]')
 input_password2.send_keys('password84$')
 
-time.sleep(10)
+time.sleep(1)
 
 register_button = driver.find_element(By.CSS_SELECTOR, 'input[type="submit"]')
 register_button.click()
 
-time.sleep(25)
+time.sleep(2)
 
+
+login_button = driver.find_element(By.CSS_SELECTOR, 'a[href="/login.php"]')
+login_button.click()
+
+time.sleep(2)
+
+login_email = driver.find_element(By.CSS_SELECTOR, 'input[id="inputEmail"]')
+login_email.send_keys('turdman@fire.com')
+
+login_pw = driver.find_element(By.CSS_SELECTOR, 'input[id="inputPassword"]')
+login_pw.send_keys('password84$')
+
+time.sleep(15)
+
+login_button2 = driver.find_element(By.CSS_SELECTOR, 'button[id="login"]')
+login_button2.click()
+
+time.sleep(5)
 
 driver.quit()
 
