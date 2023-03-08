@@ -10,8 +10,10 @@ driver = webdriver.Firefox(service=s)
 
 
 driver.maximize_window()
-driver.get('https://rahulshettyacademy.com')
+driver.get('https://rahulshettyacademy.com/angularpractice/')
 print(driver.title)
 print(driver.current_url)
+
+driver.find_element(By.NAME, 'email').send_keys('hello@hello.com')
 
 driver.close()
