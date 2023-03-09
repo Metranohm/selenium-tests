@@ -12,8 +12,18 @@ driver = webdriver.Chrome(service=s)
 driver.get('https://www.random-name-generator.com/united-states')
 driver.maximize_window()
 
-set_single = driver.find_element(By.ID, 'n').click()
+set_single = driver.find_element(By.XPATH, "//input[@type='number']")
 set_single.clear()
 set_single.send_keys("1")
 
-time.sleep(3)
+generate_button = driver.find_element(By.XPATH, "//button[@type='submit']")
+generate_button.click()
+
+time.sleep(1)
+copied_name = driver.find_element(By.XPATH, "//button[@class='btn-copy-name']").text
+print(copied_name)
+
+
+
+
+time.sleep(300)
