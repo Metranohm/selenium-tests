@@ -30,10 +30,14 @@ max_nums.send_keys("10000")
 submit_button = driver.find_element(By.CSS_SELECTOR, 'input[value="Get Numbers"]')
 submit_button.click()
 
-driver.find_element(By.CSS_SELECTOR, 'pre[class="data"]').text
+rand_nums = driver.find_element(By.XPATH, '//pre[@class="data"]').text
+print(rand_nums)
 
+driver.get('https://www.google.com')
+driver.find_element(By.NAME, 'q').send_keys(rand_nums)
 
-time.sleep(100)
+time.sleep(30)
+driver.quit()
 # reset_button = driver.find_element(By.CSS_SELECTOR, 'input[value="Reset Form"]')
 # reset_button.click()
 # time.sleep(2)
