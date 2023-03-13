@@ -9,7 +9,7 @@ s = Service('users/documents/webdrivers/chromedriver')
 driver = webdriver.Chrome(service=s)
 
 # PHP Travels testing
-driver.get('https://phptravels.com/demo/')
+driver.get('https://www.jambase.com/')
 driver.maximize_window()
 
 time.sleep(1)
