@@ -8,7 +8,7 @@ browser = webdriver.Chrome()
 browser.get("https://en.wikipedia.org/wiki/Main_Page")
 
 # Get all the links in the navigation bar
-nav_links = browser.find_elements_by_css_selector("#mp-topbanner a")
+nav_links = browser.find_elements(By.CSS_SELECTOR, "#mp-topbanner a")
 
 # Loop through each link and test if it is clickable
 for link in nav_links:
