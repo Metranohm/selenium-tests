@@ -43,5 +43,9 @@ root = tk.Tk()
 new_pw = root.clipboard_get()
 print(new_pw)
 
+driver.get('https://phptravels.org/register.php')
+input()
+time.sleep(10)
+driver.get()
 
 driver.quit() 
