@@ -4,7 +4,8 @@ from selenium.webdriver.common.by import By
 import time
 
 
-s = Service('usr/local/bin/chromedriver')
+s=Service('/usr/bin/chromedriver')
+
 driver = webdriver.Chrome(service=s)
 driver.get("https://rahulshettyacademy.com/client")
 
