@@ -5,7 +5,7 @@ from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.support.ui import WebDriverWait
 import time
 
-s = Service('usr/local/bin/chromedriver')
+s = Service('/users/documents/webdrivers/chromedriver')
 driver = webdriver.Chrome(service=s)
 driver.get('https://andrew-winkler-portfolio.netlify.app/')
 driver.maximize_window()
