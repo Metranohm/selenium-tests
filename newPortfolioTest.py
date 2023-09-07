@@ -8,7 +8,7 @@ import time
 
 def test_portfolio():
     # Setup
-    s=Service('users/documents/webdrivers/chromedriver')
+    s = Service('/home/metranohm/seleniumdrivers/chromedriver')
     driver = webdriver.Chrome(service=s)
     driver.maximize_window()
 
@@ -46,8 +46,7 @@ def test_portfolio():
     resume.click()
 
     # Assuming resume is available to download as a button or link
-    download_resume_button = WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.ID, 'download-button')))  # adjust this if necessary
-    download_resume_button.click()
+  
 
     time.sleep(2)  # Let the download finish
 

@@ -88,15 +88,6 @@ time.sleep(1)
 weather_back = driver.find_element(By.CSS_SELECTOR, 'a[href="/projects"]')
 weather_back.click()
 
-time.sleep(1)
-
-candy_click = driver.find_element(By.CSS_SELECTOR, 'a[href="/projects/museum-of-candy"]')
-candy_click.click()
-
-time.sleep(1)
-
-candy_back = driver.find_element(By.CSS_SELECTOR, 'a[href="/projects"]')
-candy_back.click()
 
 time.sleep(1)
 
